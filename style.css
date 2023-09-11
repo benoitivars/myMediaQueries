@@ -1,3 +1,5 @@
+/* Reset de base */
+
 * {
     margin: 0;
     box-sizing: border-box;
@@ -15,3 +17,38 @@
   a {
     text-decoration: none;
   }
+
+/* Tentatives de media queries*/
+
+@media screen and (max-width: 480px) {
+    body {
+        background-color: gold;
+    }
+    h1,  .b, .c, .d, .e{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        background-color: pink;
+    }
+    h1,  .a, .c, .d, .e{
+        display: none;
+    }
+}
+
+/* From 1280px (laptop 13') : background : chocolate and only the h2 Laptop 13 inches should apppear. */
+
+@media screen and (min-width: 1280px) {
+    body {
+        background-color: chocolate;
+    }
+    h1,  .a, .b, .d, .e{
+        display: none;
+    }
+}
+
+/* From 1440px (laptop) : background : cadetblue and only the h2 Laptop should apppear. */
+
+/* From 1920px (desktop) : background : cornflowerblue and only the h2 Desktop should apppear. */
