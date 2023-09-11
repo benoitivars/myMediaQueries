@@ -20,12 +20,15 @@
 
 /* Tentatives de media queries*/
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
     body {
         background-color: gold;
     }
-    h1,  .b, .c, .d, .e{
-        display: none;
+    h2 {
+        display: none; /* Masquer tous les h2 */
+    }
+    .a {
+        display: block; /* Afficher seulement h2 avec la classe "a" */
     }
 }
 
@@ -33,8 +36,11 @@
     body {
         background-color: pink;
     }
-    h1,  .a, .c, .d, .e{
+    .a, .c, .d, .e{
         display: none;
+    }
+    h1, .b {
+        display: block;
     }
 }
 
@@ -47,8 +53,37 @@
     h1,  .a, .b, .d, .e{
         display: none;
     }
+    h1, .c {
+        display: block;
+    }
 }
+
 
 /* From 1440px (laptop) : background : cadetblue and only the h2 Laptop should apppear. */
 
+@media screen and (min-width: 1440px) {
+    body {
+        background-color: cadetblue;
+    }
+    h1,  .a, .b, .c, .e{
+        display: none;
+    }
+    h1, .d {
+        display: block;
+    }
+}
+
+
 /* From 1920px (desktop) : background : cornflowerblue and only the h2 Desktop should apppear. */
+
+@media screen and (min-width: 1920px) {
+    body {
+        background-color: cornflowerblue;
+    }
+    h1,  .a, .b, .c, .d{
+        display: none;
+    }
+    h1, .e {
+        display: block;
+    }
+}
